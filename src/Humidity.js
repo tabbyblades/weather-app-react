@@ -1,5 +1,5 @@
 import React from "react";
-import humidity from "../images/water.svg";
+import humidity from "./images/water.svg";
 import "./App.css";
 
 export default function Humidity() {

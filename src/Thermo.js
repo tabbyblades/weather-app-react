@@ -1,5 +1,5 @@
 import React from "react";
-import thermo from "../images/temp.svg";
+import thermo from "./images/temp.svg";
 import "./App.css";
 
 export default function Thermo() {

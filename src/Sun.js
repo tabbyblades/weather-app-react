@@ -1,5 +1,5 @@
 import React from "react";
-import sun from "../images/01d.svg";
+import sun from "./images/01d.svg";
 
 export default function Sun() {
   return (
