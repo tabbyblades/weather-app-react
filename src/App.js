@@ -30,6 +30,9 @@ export default function App() {
           </div>
           <div className="col-sm-4 text-center">
             <Sun />
+            <br/>
+            <p>Open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="blank">
+            Github</a></p>
           </div>
           <div className="col-sm-4 text-center">
             <br />
