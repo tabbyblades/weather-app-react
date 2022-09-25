@@ -1,22 +1,26 @@
-.form-control {
+.searchForm {
     border-color: #ff5468;
     border-radius: 25px;
     font-family: "Poppins", sans-serif;
+    border-style: solid;
+    padding: 5px;
   }
   
-  .btn {
+  .submitButton {
     background-color: #ff5468;
     color: white;
     border-color: white;
     border-radius: 25px;
     font-family: "Poppins", sans-serif;
+    border-style: solid;
+    padding: 5px;
+    
+
   }
   
-  .form-inline {
-    margin-top: 40px;
-  }
-  
-  .navbar {
-    justify-content: flex-end;
+  form {
+    margin-top: 45px;
+    max-width: 55%;
+    margin-left: auto;
   }
   
