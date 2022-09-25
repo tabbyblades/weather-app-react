@@ -1,30 +1,44 @@
 import React from "react";
-import { Rings } from 'react-loader-spinner';
+import Form from "./Form.js";
+import Sun from "./Sun.js";
+import Humidity from "./Humidity.js";
+import Windsock from "./Windsock.js";
+import Thermo from "./Thermo.js";
 import './App.css';
-import Weather from "./Weather";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       
-        <p>
-          ello ello
-        </p>
-        <Weather city="London"/>
-        <Rings
-  height="80"
-  width="80"
-  color="pink"
-  radius="6"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-  ariaLabel="rings-loading"
-/>
-      </header>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
+            <h1>Edinburgh</h1>
+            <h2>
+              Sunday 3.05pm <br /> Cloudy <br /> <br />
+            </h2>
+          </div>
+          <div className="col-sm-6">
+            <Form />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-4">
+            <br />
+            <br />
+            <Humidity />
+            <Windsock />
+          </div>
+          <div className="col-sm-4 text-center">
+            <Sun />
+          </div>
+          <div class="col-sm-4 text-center">
+            <br />
+            <br /> <Thermo />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
+      
+    
