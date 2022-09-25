@@ -31,7 +31,7 @@ export default function App() {
           <div className="col-sm-4 text-center">
             <Sun />
           </div>
-          <div class="col-sm-4 text-center">
+          <div className="col-sm-4 text-center">
             <br />
             <br /> <Thermo />
           </div>
