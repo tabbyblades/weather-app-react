@@ -31,7 +31,7 @@ export default function App() {
           <div className="col-sm-4 text-center">
             <Sun />
             <br/>
-            <p>Open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="blank">
+            <p>Open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
             Github</a></p>
           </div>
           <div className="col-sm-4 text-center">
