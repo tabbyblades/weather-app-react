@@ -20,7 +20,6 @@ p {
 .searchForm {
   border-color: #ff5468;
   border-radius: 25px;
-  font-family: "Poppins", sans-serif;
   border-style: solid;
   padding: 5px;
 }
@@ -30,11 +29,8 @@ p {
   color: white;
   border-color: white;
   border-radius: 25px;
-  font-family: "Poppins", sans-serif;
   border-style: solid;
   padding: 5px;
-  
-
 }
 
 form {

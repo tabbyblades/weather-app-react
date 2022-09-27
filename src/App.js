@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import Sun from "./Sun.js";
-import Humidity from "./Humidity.js";
-import Windsock from "./Windsock.js";
-import Thermo from "./Thermo.js";
 import './App.css';
 import axios from "axios";
+import humidity from "./images/water.svg";
+import windsock from "./images/windsock.svg";
+import sun from "./images/01d.svg";
+import thermo from "./images/temp.svg";
 
 
 export default function App() {
@@ -49,18 +49,18 @@ return (
       <div className="col-sm-4">
         <br />
         <br />
-        <Humidity />
-        <Windsock />
+       <p> <img src={humidity} alt="Humidity" height={80} /> Humidity: 94%</p>
+       <p><img src={windsock} alt="Windsock" height={80} /> Wind: 1 m/s</p>
       </div>
       <div className="col-sm-4 text-center">
-        <Sun />
+      <img src={sun} alt="Sun" height={250} />
         <br/>
         <p>Open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
         Github</a></p>
       </div>
       <div className="col-sm-4 text-center">
         <br />
-        <br /> <Thermo />
+        <br /> <p><img src={thermo} alt="Thermo" height={80} /> 14°c</p>
       </div>
     </div>
     </div>
