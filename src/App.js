@@ -9,16 +9,21 @@ import thermo from "./images/temp.svg";
 
 export default function App() {
   let [city, setCity] = useState("Edinburgh");
-  let [temp, setTemp]= useState("");
+  let [weatherData, setWeatherData] =useState({ready:false});
 
 
 function showInfo(response){
-setTemp(response.data.main.temp);
+setWeatherData({
+  ready: true,
+  temperature: response.data.main.temp,
+  humidity: response.data.main.humidity,
+  description: response.data.weather[0].description,
+  wind: response.data.wind.speed,
+});
 } 
 
 function handleSubmit(event) {
 event.preventDefault();
-alert(`It is ${Math.round(temp)}°C in ${city}`);
 }
 
 function updateCity(event) {
@@ -28,6 +33,7 @@ setCity(event.target.value);}
   let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5c947bc6651bd71d8bfa87bd7568e05f&units=metric`;
   axios.get(url).then(showInfo);
 
+  if (weatherData.ready){
 return (
   <div className="App">
   <div className="container">
@@ -35,7 +41,7 @@ return (
       <div className="col-sm-6">
         <h1>Edinburgh</h1>
         <h2>
-          Sunday 3.05pm <br /> Cloudy <br /> <br />
+          Sunday 3.05pm <br /> {weatherData.description} <br /> <br />
         </h2>
       </div>
       <div className="col-sm-6">
@@ -49,8 +55,8 @@ return (
       <div className="col-sm-4">
         <br />
         <br />
-       <p> <img src={humidity} alt="Humidity" height={80} /> Humidity: 94%</p>
-       <p><img src={windsock} alt="Windsock" height={80} /> Wind: 1 m/s</p>
+       <p> <img src={humidity} alt="Humidity" height={80} /> Humidity: {Math.round(weatherData.humidity)}%</p>
+       <p><img src={windsock} alt="Windsock" height={80} /> Wind: {Math.round(weatherData.wind)} m/s</p>
       </div>
       <div className="col-sm-4 text-center">
       <img src={sun} alt="Sun" height={250} />
@@ -60,10 +66,13 @@ return (
       </div>
       <div className="col-sm-4 text-center">
         <br />
-        <br /> <p><img src={thermo} alt="Thermo" height={80} /> 14°c</p>
+        <br /> <p><img src={thermo} alt="Thermo" height={80} /> {Math.round(weatherData.temperature)}°c</p>
       </div>
     </div>
     </div>
     </div>
 );
 }
+else return(
+  <h1>Loading</h1>
+)}
