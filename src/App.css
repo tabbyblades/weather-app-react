@@ -16,3 +16,29 @@
 p {
   font-size: 25px;
 }
+
+.searchForm {
+  border-color: #ff5468;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  border-style: solid;
+  padding: 5px;
+}
+
+.submitButton {
+  background-color: #ff5468;
+  color: white;
+  border-color: white;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  border-style: solid;
+  padding: 5px;
+  
+
+}
+
+form {
+  margin-top: 45px;
+  max-width: 55%;
+  margin-left: auto;
+}
