@@ -5,6 +5,7 @@ import humidity from "./images/water.svg";
 import windsock from "./images/windsock.svg";
 import sun from "./images/01d.svg";
 import thermo from "./images/temp.svg";
+import FormattedDate from "./FormattedDate.js";
 
 
 export default function App() {
@@ -19,6 +20,7 @@ setWeatherData({
   humidity: response.data.main.humidity,
   description: response.data.weather[0].description,
   wind: response.data.wind.speed,
+  date: new Date (response.data.dt*1000),
 });
 } 
 
@@ -41,7 +43,7 @@ return (
       <div className="col-sm-6">
         <h1>Edinburgh</h1>
         <h2>
-          Sunday 3.05pm <br /> {weatherData.description} <br /> <br />
+          <FormattedDate date={weatherData.date}/> <br /> {weatherData.description} <br /> <br />
         </h2>
       </div>
       <div className="col-sm-6">
