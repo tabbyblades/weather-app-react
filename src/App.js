@@ -26,14 +26,15 @@ setWeatherData({
 
 function handleSubmit(event) {
 event.preventDefault();
+search();
 }
 
 function updateCity(event) {
 setCity(event.target.value);}
 
-
+function search(){
   let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5c947bc6651bd71d8bfa87bd7568e05f&units=metric`;
-  axios.get(url).then(showInfo);
+  axios.get(url).then(showInfo);}
 
   if (weatherData.ready){
 return (
@@ -75,6 +76,8 @@ return (
     </div>
 );
 }
-else return(
-  <h1>Loading</h1>
-)}
+else {
+  search();
+ return(
+  <h1>Loading...</h1>);
+}}
