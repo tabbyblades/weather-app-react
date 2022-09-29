@@ -21,6 +21,7 @@ setWeatherData({
   description: response.data.weather[0].description,
   wind: response.data.wind.speed,
   date: new Date (response.data.dt*1000),
+  location: response.data.name,
 });
 } 
 
@@ -42,9 +43,9 @@ return (
   <div className="container">
     <div className="row">
       <div className="col-sm-6">
-        <h1>Edinburgh</h1>
-        <h2>
-          <FormattedDate date={weatherData.date}/> <br /> {weatherData.description} <br /> <br />
+        <h1>{weatherData.location}</h1>
+        <h2 className="text-capitalize">
+          <FormattedDate date={weatherData.date}/> {weatherData.description}
         </h2>
       </div>
       <div className="col-sm-6">
