@@ -3,9 +3,9 @@ import './App.css';
 import axios from "axios";
 import humidity from "./images/water.svg";
 import windsock from "./images/windsock.svg";
-import sun from "./images/01d.svg";
 import thermo from "./images/temp.svg";
 import FormattedDate from "./FormattedDate.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 
 export default function App() {
@@ -22,8 +22,9 @@ setWeatherData({
   wind: response.data.wind.speed,
   date: new Date (response.data.dt*1000),
   location: response.data.name,
+  icon: response.data.weather[0].icon
 });
-} 
+console.log(response.data.weather[0].icon)} 
 
 function handleSubmit(event) {
 event.preventDefault();
@@ -63,7 +64,7 @@ return (
        <p><img src={windsock} alt="Windsock" height={80} /> Wind: {Math.round(weatherData.wind)} m/s</p>
       </div>
       <div className="col-sm-4 text-center">
-      <img src={sun} alt="Sun" height={250} />
+        <WeatherIcon code={weatherData.icon} alt={weatherData.description} />
         <br/>
         <p>Open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
         Github</a></p>
