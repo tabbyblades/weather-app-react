@@ -72,7 +72,7 @@ return (
       </div>
       <div className="col-sm-4 text-center">
         <br />
-        <br /> <p><img src={thermo} alt="Thermo" height={80} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/>°c</p>
+        <br /> <p><img src={thermo} alt="Thermo" height={80} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/></p>
       </div>
     </div>
     </div>
