@@ -66,7 +66,7 @@ return (
        <p><img src={windsock} alt="Windsock" height={80} /> Wind: {Math.round(weatherData.wind)} m/s</p>
       </div>
       <div className="col-sm-4 text-center">
-        <WeatherIcon code={weatherData.icon} alt={weatherData.description} />
+        <WeatherIcon code={weatherData.icon} alt={weatherData.description} height={250} />
         <br/>
         <p className="footer">Coded by Tabby Blades and open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
         Github</a></p>

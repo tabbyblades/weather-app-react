@@ -30,6 +30,6 @@ export default function WeatherIcon(props){
 
     };
     return(
-        <img src={codeMapping[props.code]} height={250} alt={props.alt}/>
+        <img src={codeMapping[props.code]} height={props.height} alt={props.alt}/>
     );
 }
