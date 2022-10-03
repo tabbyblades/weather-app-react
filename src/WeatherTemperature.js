@@ -22,7 +22,7 @@ setUnit("celsius");
 else {
     let fahrenheit = (props.celsius * 9) /5 +32;
     return(
-<span className="WeatherTemperature">{fahrenheit}
+<span className="WeatherTemperature">{Math.round(fahrenheit)}
         <a href="/" onClick={showCelsius}>°C</a> | °F</span>
     );
 }
