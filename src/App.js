@@ -7,6 +7,7 @@ import thermo from "./images/temp.svg";
 import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon.js";
 import WeatherTemperature from "./WeatherTemperature.js";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function App() {
@@ -75,6 +76,7 @@ return (
         <br /> <p><img src={thermo} alt="Thermo" height={80} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/></p>
       </div>
     </div>
+    <WeatherForecast />
     </div>
     </div>
 );
