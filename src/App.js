@@ -6,6 +6,7 @@ import windsock from "./images/windsock.svg";
 import thermo from "./images/temp.svg";
 import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon.js";
+import WeatherTemperature from "./WeatherTemperature.js";
 
 
 export default function App() {
@@ -71,7 +72,7 @@ return (
       </div>
       <div className="col-sm-4 text-center">
         <br />
-        <br /> <p><img src={thermo} alt="Thermo" height={80} /> {Math.round(weatherData.temperature)}°c</p>
+        <br /> <p><img src={thermo} alt="Thermo" height={80} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/>°c</p>
       </div>
     </div>
     </div>

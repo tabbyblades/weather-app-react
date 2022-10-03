@@ -26,7 +26,7 @@ export default function WeatherIcon(props){
         "13d": snowy,
         "13n": snowy,
         "50d": foggy,
-        "50n": foggy,
+        "50n": foggy ,
 
     };
     return(
