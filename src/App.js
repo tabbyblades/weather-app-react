@@ -24,9 +24,10 @@ setWeatherData({
   wind: response.data.wind.speed,
   date: new Date (response.data.dt*1000),
   location: response.data.name,
-  icon: response.data.weather[0].icon
+  icon: response.data.weather[0].icon,
+  coordinates: response.data.coord,
 });
-console.log(response.data.weather[0].icon)} 
+console.log(response.data.coord)} 
 
 function handleSubmit(event) {
 event.preventDefault();
@@ -76,7 +77,7 @@ return (
         <br /> <p><img src={thermo} alt="Thermo" height={80} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/></p>
       </div>
     </div>
-    <WeatherForecast />
+    <WeatherForecast coordinates={weatherData.coordinates}/>
     </div>
     </div>
 );
