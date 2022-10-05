@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
 import axios from "axios";
 
 export default function WeatherForecast(props){
 
+    let [ready, setReady] = useState(false);
+    let [forecast, setForecast] = useState(null);
+
     function handleResponse(response){
-        console.log(response.data);
+        setForecast(response.data.daily);
+        setReady(true);
     }
 
     let lon = props.coordinates.lon;
