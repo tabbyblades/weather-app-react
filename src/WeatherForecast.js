@@ -20,8 +20,8 @@ export default function WeatherForecast(props){
         <div className="WeatherForecast">
             <div className="row">
                 <div className="col-sm-2">
-                    <div className="WeatherForecast-day">Mon</div>
-                    <WeatherIcon code="01d" height={100}/>
+                    <div className="WeatherForecast-day">{forecast[0].dt}</div>
+                    <WeatherIcon code={forecast[0].weather[0].icon} height={100}/>
                     <div className="WeatherForecast-temps">
                     <span className="WeatherForecast-temp-min">{Math.round(forecast[0].temp.min)}°C</span>
                     <span className="WeatherForecast-temp-max">{Math.round(forecast[0].temp.max)}°C</span>
