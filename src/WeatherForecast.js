@@ -30,9 +30,9 @@ setReady(false);},
             <div className = "col-sm-2" key={index}>
                 <WeatherForecastDay data = {dailyForecast}/> 
         </div>);}
-    else{
-        return null;
-    }
+        else{
+            return null;
+        }
     })}
         </div>
         </div>
@@ -41,7 +41,7 @@ setReady(false);},
 else {
     let lon = props.coordinates.lon;
     let lat = props.coordinates.lat;
-    let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=5c947bc6651bd71d8bfa87bd7568e05f&units=metric`;
+    let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=21cf7404ebbe31d980b4979529bf1e5a&units=metric`;
     
     axios.get(apiUrl).then(handleResponse);
 
