@@ -29,7 +29,11 @@ setReady(false);},
         return(
             <div className = "col-sm-2" key={index}>
                 <WeatherForecastDay data = {dailyForecast}/> 
-        </div>);}})}
+        </div>);}
+    else{
+        return null;
+    }
+    })}
         </div>
         </div>
     );}
