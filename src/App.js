@@ -68,9 +68,6 @@ return (
       </div>
       <div className="col-sm-4 text-center">
         <WeatherIcon code={weatherData.icon} alt={weatherData.description} height={250} />
-        <br/>
-        <p className="footer">Coded by Tabby Blades and open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
-        Github</a></p>
       </div>
       <div className="col-sm-4 text-center">
         <br />
@@ -79,6 +76,8 @@ return (
     </div>
     <WeatherForecast coordinates={weatherData.coordinates}/>
     </div>
+    <p className="footer">Coded by Tabby Blades and open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
+        Github</a></p>
     </div>
 );
 }
