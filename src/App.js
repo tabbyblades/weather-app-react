@@ -60,18 +60,18 @@ return (
       </div>
     </div>
     <div className="row">
-      <div className="col-sm-4">
+      <div className="humidity-wind col-sm-4">
         <br />
         <br />
-       <p> <img src={humidity} alt="Humidity" height={80} /> Humidity: {Math.round(weatherData.humidity)}%</p>
-       <p><img src={windsock} alt="Windsock" height={80} /> Wind: {Math.round(weatherData.wind)} m/s</p>
+      <p> <img src={humidity} alt="Humidity" height={50} /> Humidity: {Math.round(weatherData.humidity)}%</p>
+       <p><img src={windsock} alt="Windsock" height={50} /> Wind: {Math.round(weatherData.wind)} m/s</p>
       </div>
       <div className="col-sm-4 text-center">
         <WeatherIcon code={weatherData.icon} alt={weatherData.description} height={250} />
       </div>
-      <div className="col-sm-4 text-center">
+      <div className=" temp col-sm-4 text-center">
         <br />
-        <br /> <p><img src={thermo} alt="Thermo" height={80} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/></p>
+        <br /> <p className="thermo"><img src={thermo} alt="Thermo" height={50} /><WeatherTemperature celsius={Math.round(weatherData.temperature)}/></p>
       </div>
     </div>
     <WeatherForecast coordinates={weatherData.coordinates}/>
