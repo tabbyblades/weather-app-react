@@ -68,7 +68,13 @@ form {
  .humidity-wind{
   display: none;
  }
- .temp{
+.temp{
+  display: none;
+}
+.WeatherForecast-temps{
   display:none;
+}
+ img{
+  margin-top: 50px;
  }
 }
