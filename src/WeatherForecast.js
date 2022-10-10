@@ -30,7 +30,9 @@ setReady(false);},
             <div className = "col-sm-2" key={index}>
                 <WeatherForecastDay data = {dailyForecast}/> 
         </div>);}
-
+else{
+    return null;
+}
     })}
         </div>
         </div>
