@@ -75,9 +75,9 @@ return (
       </div>
     </div>
     <WeatherForecast coordinates={weatherData.coordinates}/>
-    </div>
-    <p className="footer">Coded by Tabby Blades and open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
+    <p className="footer">coded by Tabby Blades and open-sourced on <a href="https://github.com/tabbyblades/weather-app-react" target="_blank" rel="noopener noreferrer">
         Github</a></p>
+    </div>
     </div>
 );
 }
